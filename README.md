@@ -65,7 +65,7 @@ The features used for readability assessment in our study are divided into three
 
 ## Data Process
 ### Data Clean
-从raw 到csv文件
+从raw 到csv文件。
 
 ### Corpus Analysis
 eadability formula-level分布图
