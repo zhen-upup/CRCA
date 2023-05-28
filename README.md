@@ -10,8 +10,8 @@ Text readability assessment has attracted the attention of international researc
 
  ## Content
 - [Data](#Data)
-- [DataProcess](#Data Process)
-- [Framework](#Framework)
+- [Data Process](#DataProcess)
+- [Frame Work](#FrameWork)
 - [Evaluate](#Evaluate)
 - [Results](#Results)
  
