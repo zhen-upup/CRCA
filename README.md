@@ -74,8 +74,7 @@ eadability formula-level分布图
 
 ## Framework
 We proposed a method for cross-corpus evaluation that aims to predict the readability of text from different corpora and assess the compatibility of readability systems. The project framework contains six steps: **Feature Extraction**, **Word Vector Representation**, **Feature Fusion**, **Training Model**, **Readability Prediction** and **Readability System Compatibility Assessment**.
-
-![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/%E6%B5%81%E7%A8%8B.png)
+<img src=https://github.com/LZZ1212/Cross-corpus-readability-compatibility-assessment-for-English-texts/blob/main/readme_figure/Frame_work.png/>
 
 ## Model
 We employed both machine learning and deep learning approaches with different feature combinations for experimentation. 
