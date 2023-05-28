@@ -29,7 +29,6 @@ PATH
 
  ## Content
 - [Data](#Data)
-- [Data Process](#DataProcess)
 - [Frame Work](#FrameWork)
 - [Results](#Results)
  
@@ -80,15 +79,6 @@ The features used for readability assessment in our study are divided into three
 | CoP                  | percentage of conjunctions                           |
 | CP                   | percentage of commas                                 |
 
-## Data Process
-### Data Clean
-从raw 到csv文件。
-
-### Corpus Analysis
-eadability formula-level分布图
-
-### Feature Extract
-提取21个特征
 
 ## Framework
 We proposed a method for cross-corpus evaluation that aims to predict the readability of text from different corpora and assess the compatibility of readability systems. The project framework contains six steps: **Feature Extraction**, **Word Vector Representation**, **Feature Fusion**, **Training Model**, **Readability Prediction** and **Readability System Compatibility Assessment**.
@@ -100,8 +90,6 @@ We employed both machine learning and deep learning approaches with different fe
 |----|----------------------|
 | ML | XGBoost, SVM         |
 | DL | BI-LSTM, ATT-BI-LSTM |
-
-分别对ML,DL文件进行介绍
 
 
 ## Results
