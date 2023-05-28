@@ -6,7 +6,7 @@ Text readability assessment has attracted the attention of international researc
 
 ## Install
 
-
+```
 PATH
 │  
 ├─data process
@@ -22,7 +22,7 @@ PATH
 └─evaluate
        evaluate.ipynb :Evaluate the compatibility of the model's predicted results using the RJSD, RRNSS, and NDCG metrics.
        heatmap.ipynb  :Visualize the results of compatibility evaluation.
-
+```
    
 
 
