@@ -4,7 +4,7 @@
 Text readability assessment has attracted the attention of international researchers and has been widely applied in various fields. However, different research groups often use the different corpus, and existing research lacks exploration of corpus compatibility. We propose a new evaluation framework for the task of cross-corpus text readability compatibility assessment(**CRCA**). The specific approach includes (1) Corpus: CEFR, CLEC, CLOTH, NES, OSP, and RACE. The linguistic features, GloVe word vector representation, and the fusion features of the two were extracted. (2) Classification model: Machine learning methods (XGBoost, SVM) and deep learning methods (BiLSTM, Attention-BiLSTM) were used; (3) Compatibility metrics: RJSD, RRNSS, and NDCG metrics. We mainly found that: (1) The compatibility of the corpora was validated, with OSP being significantly different from other commonly used datasets. (2) There is an adaptation effect between corpus, feature representation, and classification method. (3) The three metrics get similar results, which verifies the robustness of the compatibility assessment method. The results of this study provide valuable references for corpus selection, feature expression, and classification methods, and benefit research on cross-corpus transfer learning.
   
 
-## Install
+## PATH
 
 ```
 PATH
