@@ -7,6 +7,23 @@ Text readability assessment has attracted the attention of international researc
 ## Install
 
 
+PATH
+│  
+├─data process
+│      data_clean.ipynb         :Used to process the source files of the corpus.
+│      readability.ipynb        :Evaluate the corpus using traditional readability formulas.
+│      corpus_analysis.ipynb    :Analyze the distribution of readability formulas and corpus levels.
+│      feature_extract.ipynb    :Extract the linguistic features of six corpora.
+│      
+├─model
+|       ML.ipynb      :Machine learning algorithms: XGBoost, SVM.
+|       DL.ipynb      :Deep learning algorithms: Bi-LSTM, ATT-BI-LSTM.
+│      
+└─evaluate
+       evaluate.ipynb :Evaluate the compatibility of the model's predicted results using the RJSD, RRNSS, and NDCG metrics.
+       heatmap.ipynb  :Visualize the results of compatibility evaluation.
+
+   
 
 
 
