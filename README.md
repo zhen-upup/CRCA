@@ -1,18 +1,24 @@
 # Cross-corpus-readability-assessment-compatibility-for-English-texts
 
 ## Background
-
+Text readability assessment has attracted the attention of international researchers and has been widely applied in various fields. However, different research groups often use the different corpus, and existing research lacks exploration of corpus compatibility. We propose a new evaluation framework for the task of cross-corpus text difficulty compatibility assessment. The specific approach includes (1) Corpus: CEFR, CLEC, CLOTH, NES, OSP, and RACE. The linguistic features, GloVe word vector representation, and the fusion features of the two were extracted. (2) Classification model: Machine learning methods (XGBoost, SVM) and deep learning methods (BiLSTM, Attention-BiLSTM) were used; (3) Compatibility metrics: RJSD, RRNSS, and NDCG metrics. We mainly found that: (1) The compatibility of the corpora was validated, with OSP being significantly different from other commonly used datasets. (2) There is an adaptation effect between corpus, feature representation, and classification method. (3) The three metrics get similar results, which verifies the robustness of the compatibility assessment method. The results of this study provide valuable references for corpus selection, feature expression, and classification methods, and benefit research on cross-corpus transfer learning.
   
 
 ## Install
 
+
+
+ ## Content
+- [Data](#Data)
+- [Framework](#Framework)
+- [Results](#Results)
+ 
   
 
-### 跨语料库文本难度兼容性评估
+## Data
+### Corpus
+We used six datasets for readability research. The source files can be obtained from Baidu Cloud.
 
-  
-
-###   数据
 | Dataset | Description                                                                                                                                                                                                                                                                            |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | CEFR    | The Common European Framework of Reference for Languages (CEFR) is an internationally recognized standard for describing language proficiency and levels. The standard divides six levels based on language texts of different difficulty levels, from beginner to professional level. |
@@ -23,6 +29,8 @@
 | RACE    | The Reading Comprehension Dataset From Examination (RACE) is a collection of reading comprehension materials from English exams for middle and high school students in China, divided into two levels based on grades: junior high and senior high.                                    |
 
 ### Feature
+
+The features used for readability assessment in our study are divided into three categories: lexical features, syntactic features, and semantic features. These features were extracted from six datasets and used as inputs for training machine learning and deep learning models.
 
 | Code                 | Description                                          |
 |----------------------|------------------------------------------------------|
@@ -39,8 +47,7 @@
 | VPS                  | average number of verb phrases per sentence          |
 | PPS                  | average number of prepositional phrases per sentence |
 | SPS                  | average number of subordinate clauses per sentence   |
-| SQS                  | average number of special subordinate clauses        |
-|                      | average (question) per sentence                      |
+| SQS                  | average number of special subordinate clauses average per sentence|
 | ANPS                 | average length of noun phrases                       |
 | AVPS                 | average length of verb phrases                       |
 | APPS                 | average length of prepositional phrases              |
@@ -52,25 +59,37 @@
 | CoP                  | percentage of conjunctions                           |
 | CP                   | percentage of commas                                 |
 
-### Project Framework
+## Framework
 We proposed a method for cross-corpus evaluation that aims to predict the readability of text from different corpora and assess the compatibility of readability systems. The project framework contains six steps: Feature Extraction, Word Vector Representation, Feature Fusion, Training Model, Readability Prediction and Readability System Compatibility Assessment.
-![Alt text]([image url](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/%E6%B5%81%E7%A8%8B.png))
+![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/%E6%B5%81%E7%A8%8B.png)
 
-### Model
-| ML | XGBoost, SVM         |
+## Model
+We employed both machine learning and deep learning approaches with different feature combinations for experimentation. 
+|    | model                |
 |----|----------------------|
+| ML | XGBoost, SVM         |
 | DL | BI-LSTM, ATT-BI-LSTM |
 
-### Compatibility Results
-
-Compatibility Assessment Results of RJSD (ML+Feature)
-
-Compatibility Assessment Results of RJSD (ML/DL+GloVe)
-
-Compatibility Assessment Results of RJSD (ML/DL+fusion feature)
 
 
+## Results
+We conducted readability assessments on six corpora using three experimental combinations, including machine learning+features, machine learning+GloVe word vectors, deep learning+GloVe word vectors, machine learning+fusion features, and deep learning+fusion features. We used three evaluation metrics to assess the compatibility of the predicted results, and here we show the results of the RJSD evaluation, while the evaluation results of RRNSS and NDCG are detailed in the paper.
+  
+### Compatibility Assessment Results of RJSD (ML+Feature)
+![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_feature.png)
 
+### Compatibility Assessment Results of RJSD (ML/DL+GloVe)
+![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_Glove.png)
+
+### Compatibility Assessment Results of RJSD (ML/DL+fusion feature)
+![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_fusion.png)
+
+
+
+## Contributing
+@han @zhen
+
+## Lincense
 
 
 
