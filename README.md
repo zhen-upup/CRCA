@@ -8,11 +8,12 @@ Text readability assessment has attracted the attention of international researc
 
 
 
+
+
  ## Content
 - [Data](#Data)
 - [Data Process](#DataProcess)
 - [Frame Work](#FrameWork)
-- [Evaluate](#Evaluate)
 - [Results](#Results)
  
   
@@ -86,9 +87,6 @@ We employed both machine learning and deep learning approaches with different fe
 分别对ML,DL文件进行介绍
 
 
-## Evaluate
-
-
 ## Results
 We conducted readability assessments on six corpora using three experimental combinations, including machine learning+features, machine learning+GloVe word vectors, deep learning+GloVe word vectors, machine learning+fusion features, and deep learning+fusion features. We used three evaluation metrics to assess the compatibility of the predicted results, and here we show the results of the RJSD evaluation, while the evaluation results of RRNSS and NDCG are detailed in the paper.
   
@@ -106,7 +104,6 @@ We conducted readability assessments on six corpora using three experimental com
 ## Contributing
 @han @zhen
 
-## Lincense
 
 
 
