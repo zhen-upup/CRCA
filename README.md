@@ -1,7 +1,7 @@
-# Cross-corpus-readability-assessment-compatibility-for-English-texts
+# Cross-corpus-readability-compatibility-assessment-for-English-texts
 
 ## Background
-Text readability assessment has attracted the attention of international researchers and has been widely applied in various fields. However, different research groups often use the different corpus, and existing research lacks exploration of corpus compatibility. We propose a new evaluation framework for the task of cross-corpus text difficulty compatibility assessment. The specific approach includes (1) Corpus: CEFR, CLEC, CLOTH, NES, OSP, and RACE. The linguistic features, GloVe word vector representation, and the fusion features of the two were extracted. (2) Classification model: Machine learning methods (XGBoost, SVM) and deep learning methods (BiLSTM, Attention-BiLSTM) were used; (3) Compatibility metrics: RJSD, RRNSS, and NDCG metrics. We mainly found that: (1) The compatibility of the corpora was validated, with OSP being significantly different from other commonly used datasets. (2) There is an adaptation effect between corpus, feature representation, and classification method. (3) The three metrics get similar results, which verifies the robustness of the compatibility assessment method. The results of this study provide valuable references for corpus selection, feature expression, and classification methods, and benefit research on cross-corpus transfer learning.
+Text readability assessment has attracted the attention of international researchers and has been widely applied in various fields. However, different research groups often use the different corpus, and existing research lacks exploration of corpus compatibility. We propose a new evaluation framework for the task of cross-corpus text readability compatibility assessment(CRCA). The specific approach includes (1) Corpus: CEFR, CLEC, CLOTH, NES, OSP, and RACE. The linguistic features, GloVe word vector representation, and the fusion features of the two were extracted. (2) Classification model: Machine learning methods (XGBoost, SVM) and deep learning methods (BiLSTM, Attention-BiLSTM) were used; (3) Compatibility metrics: RJSD, RRNSS, and NDCG metrics. We mainly found that: (1) The compatibility of the corpora was validated, with OSP being significantly different from other commonly used datasets. (2) There is an adaptation effect between corpus, feature representation, and classification method. (3) The three metrics get similar results, which verifies the robustness of the compatibility assessment method. The results of this study provide valuable references for corpus selection, feature expression, and classification methods, and benefit research on cross-corpus transfer learning.
   
 
 ## Install
@@ -10,7 +10,9 @@ Text readability assessment has attracted the attention of international researc
 
  ## Content
 - [Data](#Data)
+- [DataProcess](#Data Process)
 - [Framework](#Framework)
+- [Evaluate](#Evaluate)
 - [Results](#Results)
  
   
@@ -18,6 +20,7 @@ Text readability assessment has attracted the attention of international researc
 ## Data
 ### Corpus
 We used six datasets for readability research. The source files can be obtained from Baidu Cloud.
+
 
 | Dataset | Description                                                                                                                                                                                                                                                                            |
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -59,8 +62,18 @@ The features used for readability assessment in our study are divided into three
 | CoP                  | percentage of conjunctions                           |
 | CP                   | percentage of commas                                 |
 
+## Data Process
+### Data Clean
+从raw 到csv文件
+
+### Corpus Analysis
+eadability formula-level分布图
+
+### Feature Extract
+提取21个特征
+
 ## Framework
-We proposed a method for cross-corpus evaluation that aims to predict the readability of text from different corpora and assess the compatibility of readability systems. The project framework contains six steps: Feature Extraction, Word Vector Representation, Feature Fusion, Training Model, Readability Prediction and Readability System Compatibility Assessment.
+We proposed a method for cross-corpus evaluation that aims to predict the readability of text from different corpora and assess the compatibility of readability systems. The project framework contains six steps: **Feature Extraction**, **Word Vector Representation**, **Feature Fusion**, **Training Model**, **Readability Prediction** and **Readability System Compatibility Assessment**.
 
 ![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/%E6%B5%81%E7%A8%8B.png)
 
@@ -71,19 +84,23 @@ We employed both machine learning and deep learning approaches with different fe
 | ML | XGBoost, SVM         |
 | DL | BI-LSTM, ATT-BI-LSTM |
 
+分别对ML,DL文件进行介绍
+
+
+## Evaluate
 
 
 ## Results
 We conducted readability assessments on six corpora using three experimental combinations, including machine learning+features, machine learning+GloVe word vectors, deep learning+GloVe word vectors, machine learning+fusion features, and deep learning+fusion features. We used three evaluation metrics to assess the compatibility of the predicted results, and here we show the results of the RJSD evaluation, while the evaluation results of RRNSS and NDCG are detailed in the paper.
   
 ### Compatibility Assessment Results of RJSD (ML+Feature)
-![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_feature.png)
+<img src=https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_feature.png width=70% />
 
 ### Compatibility Assessment Results of RJSD (ML/DL+GloVe)
-![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_Glove.png)
+<img src=https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_Glove.png width=70% />
 
 ### Compatibility Assessment Results of RJSD (ML/DL+fusion feature)
-![Alt text](https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_fusion.png)
+<img src=https://github.com/LZZ1212/Cross-corpus-readability-assessment-compatibility-for-English-texts/blob/main/readme_figure/RJSD_fusion.png width=70% />
 
 
 
