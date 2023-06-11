@@ -87,7 +87,7 @@ We proposed a method for cross-corpus evaluation that aims to predict the readab
 <img src=https://github.com/LZZ1212/Cross-corpus-readability-compatibility-assessment-for-English-texts/blob/main/readme_figure/Frame_work.png/>
 
 ## Model
-We employed both machine learning and deep learning approaches with different feature combinations for experimentation. In the model file, we have written a sample demo for cross-corpus readability assessment using the XGBoost method.
+We employed both machine learning and deep learning approaches with different feature combinations for experimentation. In the model file, we have written a demo for cross-corpus readability assessment using the XGBoost method.
 |    | model                |
 |----|----------------------|
 | ML | XGBoost, SVM         |
