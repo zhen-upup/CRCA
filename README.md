@@ -18,6 +18,7 @@ PATH
 ├─model
 |       ML.ipynb      :Machine learning algorithms: XGBoost, SVM.
 |       DL.ipynb      :Deep learning algorithms: Bi-LSTM, ATT-BI-LSTM.
+│       Demo_XGBoost.ipynb :XGBoost-based demo for cross-corpus assessment.
 │      
 └─evaluate
        evaluate.ipynb :Evaluate the compatibility of the model's predicted results using the RJSD, RRNSS, and NDCG metrics.
